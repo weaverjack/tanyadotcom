@@ -25,7 +25,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    border: solid red;
 }
 
 
@@ -47,7 +46,6 @@
   }
 .main {
   font-family: 'Bungee', cursive;
-  border: solid green;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -70,7 +68,6 @@
     padding: 0 10px;
     font-size: 30px;
     color: rgb(143, 27, 27);
-    border: solid red;
   }
 
   .merch h2 {
@@ -116,5 +113,28 @@
     }
 
 
+.merch .content {
+  background: linear-gradient(#e66465, #9198e5);
+  border: black solid;
+}
 
-    
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid green;
+}
+
+.teammate {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  height: 30px;
+  border: solid red;
+}
+
+.teammate img {
+  width: 100px;
+  height: 100px;
+}
