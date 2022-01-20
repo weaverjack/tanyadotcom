@@ -38,12 +38,19 @@
     grid-column: 6 / span 1;
   }
 
-@media only screen and (max-width: 186px) {
- 
-  }
 
+
+  @media only screen and (max-width: 545px) {
+    .header h1 {
+      font-size: x-large;
+    }
+  }
 .main {
   font-family: 'Bungee', cursive;
+  border: solid green;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
 }
 
@@ -51,15 +58,19 @@
     background-image: url(/egg-gang/tanya3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px; 
+    height: 400px; 
+    background-position: top right;
+    border: solid orange;
   }
 
   .mission .content {
     position: relative;
-    top: 350px;
-    left: 10px;
-    font-size: 40px;
+    top: 250px;
+    text-align: end;
+    padding: 0 10px;
+    font-size: 30px;
     color: rgb(143, 27, 27);
+    border: solid red;
   }
 
   .merch h2 {
@@ -75,3 +86,35 @@
   .item {
     flex-basis: 50%;
   }
+
+  @media only screen and (max-width: 1035px) {
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .header h1 {
+      width: 100%;
+      text-align: center;
+  
+    }
+    .navbar {
+      flex-direction: row;
+      width: 100%;
+      text-align: center;
+      display: flex;
+    }
+  
+    .navbar p {
+      width: 33%;
+    }
+  
+    .mission .content {
+      font-size: 20px;
+    }
+    }
+
+
+
+    
