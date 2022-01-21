@@ -17,6 +17,7 @@
   }
 
   html, body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
@@ -29,25 +30,49 @@
     background-repeat: no-repeat;
     background-position: top right;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: fixed;
-    height: 220px;
+    height: 180px;
     z-index: 1;
-    border: solid orange;
     
 
 }
 
 
 
-  .header h1 {
-  grid-column: 3 / span 2;
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-  .navbar {
-    grid-column: 6 / span 1;
-  }
+.header h1 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+
+}
+.navbar {
+  position: relative; 
+  bottom: 60px;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+
+.navbar p {
+  width: 33%;
+}
+
+.mission .content {
+  font-size: 20px;
+}
 
 
 
@@ -76,7 +101,7 @@
 
   .mission .content {
     position: relative;
-    top: 300px;
+    top: 250px;
     text-align: end;
     padding: 0 10px;
     font-size: 30px;
@@ -97,38 +122,28 @@
   .products {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .item span {
+    margin: auto;
+    text-align: center;
   }
 
   .item {
-    flex-basis: 50%;
+    flex-basis: 33%;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 20px;
   }
 
   @media only screen and (max-width: 1035px) {
-    .header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .header h1 {
-      width: 100%;
-      text-align: center;
-  
-    }
-    .navbar {
-      flex-direction: row;
-      width: 100%;
-      text-align: center;
-      display: flex;
-    }
-  
-    .navbar p {
-      width: 33%;
-    }
-  
-    .mission .content {
-      font-size: 20px;
-    }
+    
     }
 
 
@@ -139,14 +154,13 @@
 
 #egg-gang {
   background: rgb(58, 57, 57);
-  width: 1200px;
+  width: 90%;
   margin: auto;
 }
 
 #egg-gang h2 {
   background: rgb(58, 57, 57);
   text-align: center;
-  font-family: 'Libre Barcode 39 Text', cursive;
   font-size: 64px;
   padding: 20px;
 }
@@ -158,15 +172,23 @@
 }
 
 figure {
+ 
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 
 figure img {
-  width: 300px;
+  width: 200px;
   height: 200px;
+flex-shrink: 1;
+flex-grow: 1;  
+}
+
+figcaption h3 {
+font-family: 'Libre Barcode 39 Text', cursive;
+font-size: xx-large;
 }
 
 .contact {
