@@ -70,10 +70,6 @@
   width: 33%;
 }
 
-.mission .content {
-  font-size: 20px;
-}
-
 
 
   @media only screen and (max-width: 545px) {
@@ -94,20 +90,25 @@
   .mission {
     background-image: url(/egg-gang/tanya3.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px; 
+    background-size: cover; 
     background-position: top right;
+    height: 500px;
+    display: flex;
+    align-items: center;
+
   }
 
   .mission .content {
-    position: relative;
-    top: 250px;
     text-align: end;
     padding: 0 10px;
-    font-size: 30px;
+    font-size: 3vw;
+    max-height: 9rem;
     color: rgb(250, 244, 244);
     background: rgb(58, 57, 57);
     opacity: 0.8;
+    line-height: 2rem;
+    position: relative;
+    top: 10rem;
   }
 
   .merch {
